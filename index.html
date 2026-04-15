@@ -3,103 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football AI Web Application</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #6e7bff, #a7c0ea);
-            color: #333;
-        }
-        header {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #ff4757;
-        }
-        select {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin: 10px;
-            width: 200px;
-        }
-        .team {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            margin: 10px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-        }
-        .star {
-            color: gold;
-            cursor: pointer;
-        }
-        .match-prediction {
-            background: #fff3cd;
-            padding: 10px;
-            border-left: 5px solid #ffca2c;
-            margin: 20px;
-            border-radius: 5px;
-            animation: pulse 1s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.8);
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Football AI</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Football AI Web Application</h1>
-        <label for="league">Select League:</label>
-        <select id="league">
-            <option value="pl">Premier League</option>
-            <option value="la">La Liga</option>
-            <option value="bundesliga">Bundesliga</option>
-            <option value="serie-a">Serie A</option>
-        </select>
+        <h1>Welcome to Football AI</h1>
     </header>
-
-    <div class="team">
-        <div>Select your favorite team:</div>
-        <div class="star">⭐</div>
-    </div>
-
-    <div class="match-prediction">
-        <h3>Match Prediction:</h3>
-        <div>Score: 2 - 1</div>
-        <div>Yellow Cards: 1</div>
-        <div>Red Cards: 0</div>
-        <div>Goal Notifications: <span style="color: green;">Goal scored!</span></div>
-        <div>First 11 Lineup Analysis:</div>
-        <ul>
-            <li>GK: Player A</li>
-            <li>DF: Player B</li>
-            <li>MF: Player C</li>
-            <li>FW: Player D</li>
-        </ul>
-    </div>
-
+    <main>
+        <section id="league-selection">
+            <h2>Select Your League</h2>
+            <select id="leagues">
+                <option value="premier-league">Premier League</option>
+                <option value="la-liga">La Liga</option>
+                <option value="bundesliga">Bundesliga</option>
+                <option value="serie-a">Serie A</option>
+                <option value="ligue-1">Ligue 1</option>
+            </select>
+        </section>
+        <section id="team-favorites">
+            <h2>Favorite Your Team</h2>
+            <button>Favorite Team</button>
+        </section>
+        <section id="match-predictions">
+            <h2>Match Predictions</h2>
+            <div id="predictions">
+                <p>Predicted Score: 2 - 1</p>
+                <p>Yellow Cards: 1</p>
+                <p>Red Cards: 0</p>
+            </div>
+        </section>
+        <section id="notifications">
+            <h2>Notifications</h2>
+            <ul>
+                <li>New Match Scheduled!</li>
+                <li>Team You Favorited has a Game Today!</li>
+            </ul>
+        </section>
+        <section id="first-11-analysis">
+            <h2>First 11 Lineup Analysis</h2>
+            <p>Lineup is strong this week with no injuries reported!</p>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2026 Football AI Application</p>
+        <p>&copy; 2026 Football AI. All rights reserved.</p>
     </footer>
 </body>
 </html>
